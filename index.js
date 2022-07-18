@@ -29,16 +29,13 @@ for (var i = 0; i < number.length; i++) {
 
   });
 }
-
 // adding click handlers to number buttons
 for (var i = 0; i < operator.length; i++) {
   operator[i].addEventListener("click", function(e) {
-
-    // storing current input string and its last character in variables - used later
+// storing current input string and its last character in variables - used later
     var currentString = input.innerHTML;
     var lastChar = currentString[currentString.length - 1];
-
-    // if last character entered is an operator, replace it with the currently pressed one
+// if last character entered is an operator, replace it with the currently pressed one
     if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
       var newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
       input.innerHTML = newString;
